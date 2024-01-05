@@ -1,0 +1,23 @@
+{
+  "name": "tests_unitaires",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --recursive --exit"
+  },
+  "pre-commit": {
+    "run": ["test"],
+		"silent": true
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "pre-commit": "^1.2.2"
+  }
+}
