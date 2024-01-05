@@ -41,7 +41,18 @@ describe('Mes tests mathématiques', () => {
     });
 
     it('doit diviser les arguments si un nombre indéfini d\'arguments', (done) => {
-        assert.equal(calculette.division(10, 2), 5, 'division égale à 5');
+        assert.equal(calculette.division(180, 2, 3, 6), 5, 'division égale à 5');
         done();
     });
+
+    // correction Cyril
+      it(`Test de ma fonction division par 0 arg 2`, (done) => {    
+        assert.throws(() => calcullette.division(180, 0), Error);
+        done();
+      });
+    
+      it(`Test de ma fonction division par 0 arg 4`, (done) => {    
+        assert.throws(() => calcullette.division(180,3, 2, 0), Error);
+        done();
+      });
 });
